@@ -7,3 +7,5 @@ sudo mkdir /etc/nginx/sites-enabled
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 sudo service nginx reload
+
+sh config-ssl.sh
