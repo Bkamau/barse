@@ -11,7 +11,7 @@ echo "export LANGUAGE=en_US.UTF-8" >> ~/.bash_profile
 sudo apt-get upgrade -y
 
 #set timezone
-sudo timedatectl set-timezone America/Sao_Paulo
+sudo timedatectl set-timezone Europe/Helsinki
 
 #ppa nginx mainline
 echo "deb http://nginx.org/packages/mainline/ubuntu/ trusty nginx" | sudo tee -a /etc/apt/sources.list
@@ -29,11 +29,11 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Install MongoDB
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 -y
-echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
-sudo apt-key update -y
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 -y
+echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 sudo apt-get update -y
 sudo apt-get install -y mongodb-org
+sudo service mongod start
 
 # Install PM2
 sudo npm install pm2 -g
