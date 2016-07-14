@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name benson.fi www.benson.fi;
+    server_name vaxly.io www.vaxly.io;
     return 301 https://$server_name$request_uri;
 }
 
@@ -8,8 +8,8 @@ server {
     listen 443 ssl;
 
     server_name benson.fi;
-    ssl_certificate /etc/letsencrypt/live/benson.fi/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/benson.fi/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/vaxly.io/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/vaxly.io/privkey.pem;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_prefer_server_ciphers on;
     ssl_dhparam /etc/ssl/certs/dhparam.pem;

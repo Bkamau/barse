@@ -3,8 +3,7 @@
 sudo apt-get -y install git bc
 sudo git clone https://github.com/certbot/certbot.git /opt/letsencrypt
 
-# change to --agree-tos in production
-/opt/letsencrypt/letsencrypt-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d benson.fi -d www.benson.fi --register-unsafely-without-email  --agree-dev-preview
+/opt/letsencrypt/letsencrypt-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d vaxly.io -d www.vaxly.io --register-unsafely-without-email  --agree-tos
 
 export EDITOR=nano
 crontab -l | { cat; echo "30 2 * * 1 /opt/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log"; } | crontab -
