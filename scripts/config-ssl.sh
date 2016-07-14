@@ -3,7 +3,7 @@
 sudo apt-get -y install git bc
 sudo git clone https://github.com/certbot/certbot.git /opt/letsencrypt
 
-/opt/letsencrypt/letsencrypt-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d altavares.tk -d www.altavares.tk
+/opt/letsencrypt/letsencrypt-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d benson.fi -d www.benson.fi --register-unsafely-without-email
 
 export EDITOR=nano
 crontab -l | { cat; echo "30 2 * * 1 /opt/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log"; } | crontab -
