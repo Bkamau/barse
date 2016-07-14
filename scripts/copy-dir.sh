@@ -14,3 +14,5 @@ pm2 start /usr/src/apps/ParseServer/start.sh --name="ParseServer"
 pm2 startup ubuntu
 sudo su -c "env PATH=$PATH:/usr/bin pm2 startup ubuntu -u ubuntu --hp /home/ubuntu"
 pm2 save
+
+sh config-nginx.sh
