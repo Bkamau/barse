@@ -7,6 +7,9 @@ echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bash_profile
 echo "export LANGUAGE=en_US.UTF-8" >> ~/.bash_profile
 . ~/.bash_profile
 
+sudo useradd -m git
+sudo useradd -m ubuntu
+
 #install ubuntu updates
 sudo apt update 
 
