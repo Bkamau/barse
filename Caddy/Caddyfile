@@ -1,0 +1,15 @@
+caddy.dynu.net {
+	root /srv/html
+}
+bad.caddy.dynu.net {
+	root /srv/html2
+	basicauth /secret Bob hiccup
+}
+cloud.caddy.dynu.net {
+	root /srv/pydio
+	gzip
+	rewrite / {
+                to {path} {path}/ /index.php?{query}
+        }
+}
+
