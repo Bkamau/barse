@@ -1,0 +1,3 @@
+Manual changes
+1. Change domain name in file Caddy/Caddyfile
+2. Change domain in file ParseServer/parse/dashboard/index.js
