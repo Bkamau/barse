@@ -1,15 +1,8 @@
-caddy.dynu.net {
-	root /srv/html
-}
-bad.caddy.dynu.net {
-	root /srv/html2
-	basicauth /secret Bob hiccup
-}
-cloud.caddy.dynu.net {
-	root /srv/pydio
-	gzip
-	rewrite / {
-                to {path} {path}/ /index.php?{query}
-        }
+vaxly.io {
+    proxy / localhost:3000 {
+        proxy_header X-Forwarded-Proto {scheme}
+        proxy_header X-Forwarded-For {host}
+        proxy_header Host {host}
+    }
 }
 
