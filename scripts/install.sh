@@ -8,7 +8,7 @@ echo "export LANGUAGE=en_US.UTF-8" >> ~/.bash_profile
 . ~/.bash_profile
 
 #install ubuntu updates
-sudo apt update && apt -y  upgrade
+sudo apt update 
 
 #set timezone
 sudo timedatectl set-timezone Europe/Helsinki
