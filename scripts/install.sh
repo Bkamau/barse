@@ -8,7 +8,7 @@ echo "export LANGUAGE=en_US.UTF-8" >> ~/.bash_profile
 . ~/.bash_profile
 
 #install ubuntu updates
-sudo apt-get upgrade -y
+sudo apt update && apt -y  upgrade
 
 #set timezone
 sudo timedatectl set-timezone Europe/Helsinki
@@ -18,11 +18,10 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Install MongoDB
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 -y
+sudo apt adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 -y
 echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
-sudo apt-key update -y
-sudo apt-get update -y
-sudo apt-get install -y mongodb-org
+sudo apt -y update 
+sudo apt -y install --allow-unauthenticated mongodb-org
 
 # Install PM2
 sudo npm install pm2 -g
