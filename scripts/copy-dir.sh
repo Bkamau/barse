@@ -5,6 +5,7 @@ sudo mkdir -p /usr/src/apps
 sudo mkdir -p /etc/caddy
 
 # Bundle app source
+sudo cp -rf ../letsencrypt /etc
 sudo cp -rf ../ParseServer /usr/src/apps
 sudo cp -rf ../Caddy/caddy /usr/bin
 sudo cp -rf ../Caddy/Caddyfile /etc/caddy
