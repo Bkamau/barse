@@ -1,4 +1,4 @@
-YOUR-DOMAIN-HERE {
+benson.fi {
     proxy / localhost:3030 {
         proxy_header X-Forwarded-Proto {scheme}
         proxy_header X-Forwarded-For {host}

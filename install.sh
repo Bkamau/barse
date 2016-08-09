@@ -7,14 +7,25 @@ echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bash_profile
 echo "export LANGUAGE=en_US.UTF-8" >> ~/.bash_profile
 . ~/.bash_profile
 
-sudo useradd -m git
-sudo useradd -m ubuntu
-
-#install ubuntu updates
-sudo apt update 
 
 #set timezone
 sudo timedatectl set-timezone Europe/Helsinki
+
+#set up users
+sudo useradd -m git
+sudo useradd -m ubuntu
+
+sudo groupadd -g 33 www-data
+sudo useradd \
+  -g www-data --no-user-group \
+  --home-dir /var/www --no-create-home \
+  --shell /usr/sbin/nologin \
+  --system --uid 33 www-data
+
+
+
+#install ubuntu updates
+sudo apt update 
 
 #install nodejs
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -

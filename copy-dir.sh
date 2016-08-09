@@ -4,6 +4,12 @@
 sudo mkdir -p /usr/src/apps
 sudo mkdir -p /etc/caddy
 
+mkdir /etc/caddy
+chown -R root:www-data /etc/caddy
+mkdir /etc/ssl/caddy
+chown -R www-data:root /etc/ssl/caddy
+chmod 0770 /etc/ssl/caddy
+
 # Bundle app source
 sudo cp -rf ../letsencrypt /etc
 sudo cp -rf ../ParseServer /usr/src/apps
